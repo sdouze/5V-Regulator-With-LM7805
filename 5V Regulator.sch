@@ -52,7 +52,7 @@ U 1 1 5E0828F7
 P 2450 2250
 F 0 "C2" H 2568 2296 50  0000 L CNN
 F 1 "10μF" H 2568 2205 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2488 2100 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 2488 2100 50  0001 C CNN
 F 3 "~" H 2450 2250 50  0001 C CNN
 	1    2450 2250
 	1    0    0    -1  
@@ -113,4 +113,70 @@ Wire Wire Line
 Connection ~ 1850 1950
 Text Label 1100 1750 0    50   ~ 0
 5-35V
+$Comp
+L power:+5V #PWR03
+U 1 1 5E546320
+P 2525 1200
+F 0 "#PWR03" H 2525 1050 50  0001 C CNN
+F 1 "+5V" V 2540 1328 50  0000 L CNN
+F 2 "" H 2525 1200 50  0001 C CNN
+F 3 "" H 2525 1200 50  0001 C CNN
+	1    2525 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5E54697E
+P 1350 1200
+F 0 "#PWR01" H 1350 1050 50  0001 C CNN
+F 1 "VCC" H 1367 1373 50  0000 C CNN
+F 2 "" H 1350 1200 50  0001 C CNN
+F 3 "" H 1350 1200 50  0001 C CNN
+	1    1350 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR02
+U 1 1 5E547950
+P 1450 1200
+F 0 "#PWR02" H 1450 950 50  0001 C CNN
+F 1 "Earth" H 1450 1050 50  0001 C CNN
+F 2 "" H 1450 1200 50  0001 C CNN
+F 3 "~" H 1450 1200 50  0001 C CNN
+	1    1450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR04
+U 1 1 5E547F7A
+P 2625 1200
+F 0 "#PWR04" H 2625 950 50  0001 C CNN
+F 1 "Earth" H 2625 1050 50  0001 C CNN
+F 2 "" H 2625 1200 50  0001 C CNN
+F 3 "~" H 2625 1200 50  0001 C CNN
+	1    2625 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5E54CCC9
+P 1450 1000
+F 0 "J1" V 1512 1044 50  0000 L CNN
+F 1 "Input" V 1603 1044 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 1450 1000 50  0001 C CNN
+F 3 "~" H 1450 1000 50  0001 C CNN
+	1    1450 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5E54DB7C
+P 2625 1000
+F 0 "J2" V 2687 1044 50  0000 L CNN
+F 1 "Output" V 2778 1044 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 2625 1000 50  0001 C CNN
+F 3 "~" H 2625 1000 50  0001 C CNN
+	1    2625 1000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
