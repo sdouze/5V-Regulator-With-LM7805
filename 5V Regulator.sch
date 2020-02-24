@@ -1,0 +1,116 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:LM7805_TO220 U1
+U 1 1 5E080102
+P 2150 1950
+F 0 "U1" H 2150 2192 50  0000 C CNN
+F 1 "LM7805_TO220" H 2150 2101 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2150 2175 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2150 1900 50  0001 C CNN
+	1    2150 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4002 D1
+U 1 1 5E0803BC
+P 1600 1950
+F 0 "D1" H 1600 1734 50  0000 C CNN
+F 1 "1N4002" H 1600 1825 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1600 1775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1600 1950 50  0001 C CNN
+	1    1600 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5E0822F5
+P 1850 2250
+F 0 "C1" H 1968 2296 50  0000 L CNN
+F 1 "100μF" H 1968 2205 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1888 2100 50  0001 C CNN
+F 3 "~" H 1850 2250 50  0001 C CNN
+	1    1850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5E0828F7
+P 2450 2250
+F 0 "C2" H 2568 2296 50  0000 L CNN
+F 1 "10μF" H 2568 2205 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2488 2100 50  0001 C CNN
+F 3 "~" H 2450 2250 50  0001 C CNN
+	1    2450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5E0850A7
+P 2550 1950
+F 0 "#PWR0101" H 2550 1800 50  0001 C CNN
+F 1 "+5V" V 2565 2078 50  0000 L CNN
+F 2 "" H 2550 1950 50  0001 C CNN
+F 3 "" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0102
+U 1 1 5E085F0E
+P 2150 2450
+F 0 "#PWR0102" H 2150 2200 50  0001 C CNN
+F 1 "Earth" H 2150 2300 50  0001 C CNN
+F 2 "" H 2150 2450 50  0001 C CNN
+F 3 "~" H 2150 2450 50  0001 C CNN
+	1    2150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5E087B5F
+P 1200 1950
+F 0 "#PWR0103" H 1200 1800 50  0001 C CNN
+F 1 "VCC" H 1217 2123 50  0000 C CNN
+F 2 "" H 1200 1950 50  0001 C CNN
+F 3 "" H 1200 1950 50  0001 C CNN
+	1    1200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1950 1450 1950
+Wire Wire Line
+	1750 1950 1850 1950
+Wire Wire Line
+	2450 1950 2550 1950
+Wire Wire Line
+	2450 2100 2450 1950
+Connection ~ 2450 1950
+Wire Wire Line
+	2450 2400 2150 2400
+Wire Wire Line
+	2150 2400 2150 2250
+Wire Wire Line
+	2150 2400 2150 2450
+Connection ~ 2150 2400
+Wire Wire Line
+	1850 2400 2150 2400
+Wire Wire Line
+	1850 2100 1850 1950
+Connection ~ 1850 1950
+Text Label 1100 1750 0    50   ~ 0
+5-35V
+$EndSCHEMATC
